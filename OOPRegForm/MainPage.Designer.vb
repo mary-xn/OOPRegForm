@@ -27,6 +27,9 @@ Partial Class MainPage
         Me.Button1 = New System.Windows.Forms.Button()
         Me.UpdateBtn = New System.Windows.Forms.Button()
         Me.DeleteBtn = New System.Windows.Forms.Button()
+        Me.StudentsGrid = New System.Windows.Forms.DataGridView()
+        Me.RefreshBtn = New System.Windows.Forms.Button()
+        CType(Me.StudentsGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,7 +48,7 @@ Partial Class MainPage
         Me.AddNewBtm.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.AddNewBtm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddNewBtm.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddNewBtm.Location = New System.Drawing.Point(1036, 145)
+        Me.AddNewBtm.Location = New System.Drawing.Point(1015, 109)
         Me.AddNewBtm.Name = "AddNewBtm"
         Me.AddNewBtm.Size = New System.Drawing.Size(294, 68)
         Me.AddNewBtm.TabIndex = 4
@@ -67,7 +70,7 @@ Partial Class MainPage
         Me.UpdateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.UpdateBtn.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateBtn.Location = New System.Drawing.Point(1036, 256)
+        Me.UpdateBtn.Location = New System.Drawing.Point(1015, 211)
         Me.UpdateBtn.Name = "UpdateBtn"
         Me.UpdateBtn.Size = New System.Drawing.Size(294, 68)
         Me.UpdateBtn.TabIndex = 7
@@ -79,12 +82,36 @@ Partial Class MainPage
         Me.DeleteBtn.BackColor = System.Drawing.Color.LightCoral
         Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteBtn.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteBtn.Location = New System.Drawing.Point(1036, 367)
+        Me.DeleteBtn.Location = New System.Drawing.Point(1015, 316)
         Me.DeleteBtn.Name = "DeleteBtn"
         Me.DeleteBtn.Size = New System.Drawing.Size(294, 68)
         Me.DeleteBtn.TabIndex = 8
         Me.DeleteBtn.Text = "Delete"
         Me.DeleteBtn.UseVisualStyleBackColor = False
+        '
+        'StudentsGrid
+        '
+        Me.StudentsGrid.BackgroundColor = System.Drawing.Color.Linen
+        Me.StudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StudentsGrid.Location = New System.Drawing.Point(12, 109)
+        Me.StudentsGrid.Name = "StudentsGrid"
+        Me.StudentsGrid.RowHeadersWidth = 51
+        Me.StudentsGrid.RowTemplate.Height = 24
+        Me.StudentsGrid.Size = New System.Drawing.Size(939, 475)
+        Me.StudentsGrid.TabIndex = 9
+        '
+        'RefreshBtn
+        '
+        Me.RefreshBtn.BackColor = System.Drawing.Color.AliceBlue
+        Me.RefreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RefreshBtn.Font = New System.Drawing.Font("Verdana", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RefreshBtn.Location = New System.Drawing.Point(1015, 427)
+        Me.RefreshBtn.Name = "RefreshBtn"
+        Me.RefreshBtn.Size = New System.Drawing.Size(294, 68)
+        Me.RefreshBtn.TabIndex = 10
+        Me.RefreshBtn.Text = "Refresh"
+        Me.RefreshBtn.UseVisualStyleBackColor = False
         '
         'MainPage
         '
@@ -92,6 +119,8 @@ Partial Class MainPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Linen
         Me.ClientSize = New System.Drawing.Size(1406, 642)
+        Me.Controls.Add(Me.RefreshBtn)
+        Me.Controls.Add(Me.StudentsGrid)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.UpdateBtn)
         Me.Controls.Add(Me.Button1)
@@ -100,6 +129,7 @@ Partial Class MainPage
         Me.Name = "MainPage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainPage"
+        CType(Me.StudentsGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -110,4 +140,6 @@ Partial Class MainPage
     Friend WithEvents Button1 As Button
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents DeleteBtn As Button
+    Friend WithEvents StudentsGrid As DataGridView
+    Friend WithEvents RefreshBtn As Button
 End Class
